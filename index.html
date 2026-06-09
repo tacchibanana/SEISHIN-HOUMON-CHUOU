@@ -10,18 +10,20 @@
 
   :root {
     /* HPブランドカラー準拠 */
-    --primary:   #e91e8c;   /* ピンク/マゼンタ */
-    --primary-d: #c4147a;   /* 濃いピンク */
-    --primary-l: #fde8f4;   /* 薄いピンク背景 */
-    --accent:    #00b8d4;   /* シアン/水色アクセント */
-    --accent-l:  #e0f7fa;
-    --navy:      #1a2d3e;   /* テキスト濃紺 */
+    --primary:   #2e9bb5;   /* さわやかティール */
+    --primary-d: #1a7a94;   /* 落ち着いたティール */
+    --primary-l: #e8f6fa;   /* 薄いティール背景 */
+    --accent:    #52b788;   /* やわらかセージグリーン */
+    --accent-l:  #eaf6f0;
+    --navy:      #2c4a5a;   /* やや明るいネイビー */
     --gray-1:    #f7f8f9;   /* 最薄グレー */
     --gray-2:    #eef0f2;
     --gray-3:    #d0d5db;
-    --text-body: #2a3a4a;
-    --text-sub:  #4a5a6a;
+    --text-body: #3a5060;
+    --text-sub:  #5a7080;
     --white:     #ffffff;
+    --magenta:   #e05a9a;   /* 差し色：薄マゼンタ */
+    --magenta-l: #fce8f4;   /* 薄マゼンタ背景 */
   }
 
   body {
@@ -54,13 +56,13 @@
 
   /* ── ヘッダー帯 ── */
   .front-topbar {
-    background: linear-gradient(90deg, #c4147a, #e91e8c, #00b8d4);
+    background: linear-gradient(90deg, #1a7a94, #2e9bb5, #e05a9a);
     padding: 0 36px;
     height: 7px;
   }
 
   .front-hero {
-    background: linear-gradient(135deg, #2d1240 0%, #4a1860 45%, #1a3a50 100%);
+    background: linear-gradient(135deg, #1a4a5e 0%, #1e6678 50%, #2e8ca0 100%);
     padding: 28px 36px 24px;
     position: relative;
     overflow: hidden;
@@ -88,13 +90,13 @@
     right: -60px; top: -60px;
     width: 260px; height: 260px;
     border-radius: 50%;
-    background: rgba(233,30,140,0.18);
+    background: rgba(46,155,181,0.18);
     pointer-events: none;
   }
 
   .hero-en-label {
     font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
     letter-spacing: 0.3em;
     color: rgba(255,255,255,0.95);
@@ -115,11 +117,11 @@
     padding: 4px 12px;
     border-radius: 20px;
     margin-bottom: 12px;
-    border: 1px solid rgba(255,255,255,0.45);
+    border: 1px solid rgba(224,90,154,0.6);
   }
 
   .hero-company {
-    font-size: 12px;
+    font-size: 11px;
     color: rgba(255,255,255,0.95);
     letter-spacing: 0.12em;
     margin-bottom: 5px;
@@ -127,7 +129,7 @@
 
   .hero-name {
     font-family: 'Noto Serif JP', serif;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 700;
     color: var(--white);
     line-height: 1.35;
@@ -163,8 +165,8 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: 11.5px;
-    color: rgba(255,255,255,0.95;
+    font-size: 10.5px;
+    color: rgba(255,255,255,0.95);
     margin-bottom: 14px;
   }
 
@@ -194,10 +196,10 @@
   /* ── 本文エリア ── */
   .front-body {
     flex: 1;
-    padding: 18px 32px 0;
+    padding: 22px 36px 0;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 18px;
     background: var(--white);
   }
 
@@ -206,21 +208,21 @@
     display: flex;
     align-items: baseline;
     gap: 12px;
-    margin-bottom: 9px;
+    margin-bottom: 12px;
   }
 
   .sec-head .en {
     font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.2em;
-    color: var(--primary);
+    color: var(--magenta);
     text-transform: uppercase;
   }
 
   .sec-head .ja {
     font-family: 'Noto Serif JP', serif;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     color: var(--navy);
     letter-spacing: 0.1em;
@@ -238,30 +240,30 @@
   .strengths {
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 9px;
   }
 
   .str-card {
     display: flex;
     gap: 12px;
     align-items: flex-start;
-    padding: 10px 12px;
-    background: #fde8f4;
+    padding: 12px 14px;
+    background: var(--magenta-l);
     border-radius: 6px;
-    border-left: 3px solid var(--primary);
+    border-left: 3px solid var(--magenta);
   }
 
   .str-card:nth-child(2) {
-    background: #e0f7fa;
+    background: #eaf6f0;
     border-left-color: var(--accent);
   }
   .str-card:nth-child(3) { border-left-color: var(--primary-d); }
 
   .str-num {
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
-    color: var(--primary);
+    color: var(--magenta);
     line-height: 1;
     flex-shrink: 0;
     width: 22px;
@@ -269,11 +271,12 @@
   }
 
   .str-card:nth-child(2) .str-num { color: var(--accent); }
+  .str-card:nth-child(1) .str-num { color: var(--magenta); }
   .str-card:nth-child(3) .str-num { color: var(--primary-d); }
 
   .str-body h3 {
     font-family: 'Noto Serif JP', serif;
-    font-size: 12.5px;
+    font-size: 11.5px;
     font-weight: 700;
     color: var(--navy);
     margin-bottom: 4px;
@@ -281,7 +284,7 @@
   }
 
   .str-body p {
-    font-size: 10.5px;
+    font-size: 9.5px;
     color: var(--text-body);
     line-height: 1.75;
   }
@@ -309,7 +312,7 @@
   .info-row .lbl {
     padding: 7px 10px;
     background: var(--primary-l);
-    font-size: 11px;
+    font-size: 9.5px;
     font-weight: 700;
     color: var(--primary-d);
     letter-spacing: 0.06em;
@@ -320,7 +323,7 @@
 
   .info-row .val {
     padding: 7px 12px;
-    font-size: 11px;
+    font-size: 9.5px;
     color: var(--navy);
     line-height: 1.55;
     border-bottom: 1px solid var(--gray-3);
@@ -335,7 +338,7 @@
 
   /* ── フッター ── */
   .front-footer {
-    background: linear-gradient(90deg, #c4147a 0%, #e91e8c 60%, #f0359a 100%);
+    background: linear-gradient(90deg, #1a7a94 0%, #2e9bb5 60%, #3aaeca 100%);
     padding: 13px 36px;
     display: flex;
     align-items: center;
@@ -350,18 +353,18 @@
 
   .footer-name {
     font-family: 'Noto Serif JP', serif;
-    font-size: 13px;
+    font-size: 10.5px;
     color: rgba(255,255,255,0.95);
     letter-spacing: 0.06em;
   }
 
   .footer-name span {
-    color: var(--accent);
+    color: var(--magenta);
   }
 
   .footer-url {
     font-family: 'Montserrat', sans-serif;
-    font-size: 11px;
+    font-size: 10px;
     color: rgba(255,255,255,0.95);
     letter-spacing: 0.05em;
   }
@@ -386,13 +389,13 @@
   ============================================================ */
 
   .back-topbar {
-    background: linear-gradient(90deg, #00b8d4, #e91e8c, #c4147a);
+    background: linear-gradient(90deg, #e05a9a, #2e9bb5, #1a7a94);
     height: 7px;
     flex-shrink: 0;
   }
 
   .back-hero {
-    background: linear-gradient(135deg, #1a3a50 0%, #1f4a6e 50%, #2d1240 100%);
+    background: linear-gradient(135deg, #1a4a5e 0%, #1e6678 50%, #1a7a94 100%);
     padding: 16px 36px;
     display: flex;
     align-items: center;
@@ -402,7 +405,7 @@
 
   .back-hero-left .en {
     font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
     letter-spacing: 0.25em;
     color: rgba(255,255,255,0.95);
@@ -412,14 +415,14 @@
 
   .back-hero-left h2 {
     font-family: 'Noto Serif JP', serif;
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 600;
     color: var(--white);
     letter-spacing: 0.1em;
   }
 
   .back-hero-left p {
-    font-size: 12px;
+    font-size: 11px;
     color: rgba(255,255,255,0.92);
     margin-top: 3px;
     letter-spacing: 0.06em;
@@ -428,25 +431,25 @@
   /* 裏面ボディ */
   .back-body {
     flex: 1;
-    padding: 16px 32px;
+    padding: 20px 36px;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 16px;
     background: var(--white);
     overflow: hidden;
   }
 
   /* 挨拶文 */
   .greeting-wrap {
-    background: #fde8f4;
+    background: #eaf6fa;
     border-radius: 8px;
     padding: 14px 16px 14px 20px;
-    border-left: 3px solid var(--primary);
+    border-left: 3px solid var(--magenta);
   }
 
   .greeting-title {
     font-family: 'Noto Serif JP', serif;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
     color: var(--navy);
     margin-bottom: 8px;
@@ -454,14 +457,14 @@
   }
 
   .greeting-text {
-    font-size: 11px;
+    font-size: 9.5px;
     color: var(--text-body);
     line-height: 1.95;
   }
 
   .greeting-sig {
     font-family: 'Noto Serif JP', serif;
-    font-size: 10.5px;
+    font-size: 9.5px;
     color: var(--text-sub);
     text-align: right;
     margin-top: 7px;
@@ -507,7 +510,7 @@
   .profile-badge {
     background: var(--navy);
     color: var(--gray-1);
-    font-size: 10px;
+    font-size: 8.5px;
     font-weight: 600;
     padding: 3px 8px;
     border-radius: 10px;
@@ -562,7 +565,7 @@
   }
 
   .career-item span {
-    font-size: 11px;
+    font-size: 10px;
     color: var(--text-body);
     line-height: 1.35;
   }
@@ -582,7 +585,7 @@
   .skill-tag {
     background: var(--gray-2);
     color: var(--navy);
-    font-size: 10px;
+    font-size: 8.5px;
     padding: 2px 8px;
     border-radius: 10px;
     letter-spacing: 0.04em;
@@ -601,7 +604,7 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: 11px;
+    font-size: 9.5px;
     color: var(--text-body);
   }
 
@@ -617,7 +620,7 @@
 
   /* 相談ボックス */
   .consult-box {
-    background: linear-gradient(135deg, #007a8c 0%, #00b8d4 50%, #00c9e8 100%);
+    background: linear-gradient(135deg, #1a7a94 0%, #2e9bb5 50%, #3aaeca 100%);
     border-radius: 8px;
     padding: 16px 20px;
     position: relative;
@@ -644,7 +647,7 @@
 
   .consult-sec-head .en {
     font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.2em;
     color: rgba(255,255,255,0.95);
@@ -653,7 +656,7 @@
 
   .consult-sec-head .ja {
     font-family: 'Noto Serif JP', serif;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     color: var(--accent);
     letter-spacing: 0.08em;
@@ -664,7 +667,7 @@
     border-left: 3px solid rgba(255,255,255,0.7);
     border-radius: 0 5px 5px 0;
     padding: 8px 12px;
-    font-size: 11px;
+    font-size: 9.5px;
     color: white;
     line-height: 1.8;
     margin-bottom: 12px;
@@ -693,13 +696,13 @@
   }
 
   .consult-contact-lbl {
-    font-size: 11px;
+    font-size: 10px;
     color: rgba(255,255,255,0.92);
   }
 
   .consult-contact-val {
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
+    font-size: 13.5px;
     font-weight: 600;
     color: var(--white);
     line-height: 1.2;
@@ -707,11 +710,11 @@
 
   .consult-contact-val.small {
     font-family: 'Noto Sans JP', sans-serif;
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .consult-footer-note {
-    font-size: 10px;
+    font-size: 8.5px;
     color: white;
     margin-top: 10px;
     line-height: 1.7;
@@ -719,7 +722,7 @@
 
   /* 裏面フッター */
   .back-footer {
-    background: linear-gradient(90deg, #c4147a 0%, #e91e8c 60%, #f0359a 100%);
+    background: linear-gradient(90deg, #1a7a94 0%, #2e9bb5 60%, #3aaeca 100%);
     padding: 11px 36px;
     display: flex;
     align-items: center;
@@ -728,21 +731,21 @@
   }
 
   .back-footer-addr {
-    font-size: 11px;
+    font-size: 10px;
     color: rgba(255,255,255,0.92);
     line-height: 1.65;
   }
 
   .back-footer-addr strong {
     display: block;
-    font-size: 12px;
+    font-size: 11px;
     color: rgba(255,255,255,0.95);
     margin-bottom: 1px;
   }
 
   .back-footer-right {
     font-family: 'Montserrat', sans-serif;
-    font-size: 11px;
+    font-size: 10px;
     color: rgba(255,255,255,0.95);
     text-align: right;
     letter-spacing: 0.05em;
