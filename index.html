@@ -249,7 +249,7 @@ letter-spacing: 0.1em;
 content: ‘’;
 flex: 1;
 height: 1px;
-background: var(–gray-3);
+background: linear-gradient(90deg, var(–magenta), transparent);
 margin-left: 6px;
 }
 
@@ -274,7 +274,7 @@ border-left: 3px solid var(–magenta);
 background: #eaf6f0;
 border-left-color: var(–accent);
 }
-.str-card:nth-child(3) { border-left-color: var(–primary-d); }
+.str-card:nth-child(3) { border-left-color: #c06090; }
 
 .str-num {
 font-family: ‘Montserrat’, sans-serif;
@@ -362,6 +362,10 @@ align-items: center;
 justify-content: space-between;
 }
 
+@media print {
+.front-footer, .back-footer { display: none !important; }
+}
+
 .footer-left {
 display: flex;
 flex-direction: column;
@@ -425,7 +429,7 @@ font-family: ‘Montserrat’, sans-serif;
 font-size: 13.8px;
 font-weight: 500;
 letter-spacing: 0.25em;
-color: rgba(255,255,255,0.95);
+color: var(–magenta);
 text-transform: uppercase;
 margin-bottom: 4px;
 }
@@ -525,8 +529,8 @@ object-position: center 0%;  /* 上端から表示 → 顔〜ロゴまで収ま�
 }
 
 .profile-badge {
-background: var(–navy);
-color: var(–gray-1);
+background: var(–magenta);
+color: #fff;
 font-size: 12.7px;
 font-weight: 600;
 padding: 3px 8px;
@@ -628,8 +632,8 @@ color: var(–text-body);
 .contact-icon-circle {
 width: 18px; height: 18px;
 border-radius: 50%;
-background: var(–gray-2);
-border: 1px solid var(–gray-3);
+background: var(–magenta-l);
+border: 1px solid var(–magenta);
 display: flex; align-items: center; justify-content: center;
 font-size: 13.8px;
 flex-shrink: 0;
@@ -1011,6 +1015,7 @@ print-color-adjust: exact !important;
 color-adjust: exact !important;
 }
 .page-label { display: none !important; }
+.front-footer, .back-footer { display: none !important; }
 .leaflet-page {
 width: 210mm !important;
 height: 297mm !important;
